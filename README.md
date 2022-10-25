@@ -5,7 +5,7 @@ Last updated by Bor-Rong (Hypo) Chen and Cody M. Walker.
 
 Raw battery data and codes for battery aging mode classification.    
 
-The raw dataset is consisted of 44 NMC/Gr single layer pouch cells. The data provided include cycle-by-cycle capacity, Columbic efficiency, end of charge voltage (EOCV), and end of discharge voltage (EODV). 
+The raw dataset consists of 44 NMC/Graphite single layer pouch cells. The data provided include cycle-by-cycle capacity, Coulombic efficiency, end of charge voltage (EOCV), and end of discharge voltage (EODV). 
 
 ###  Summary of the cells
 A summary of the 44 cells' information, including design parameters and cycling conditions, can be found in `Pouch cell_summary.xlsx`.  
@@ -13,7 +13,7 @@ A summary of the 44 cells' information, including design parameters and cycling 
 ### Battery data overview 
 Stored in the folder `Battery raw data.zip`.  
 
-Cycle-by-cycle battery data, including capacity, Columbic efficiency, end of charge voltage (EOCV), and end of discharge voltage (EODV), are stored in folders named by the pack number and design:
+Cycle-by-cycle battery data, including capacity, Coulombic efficiency, end of charge voltage (EOCV), and end of discharge voltage (EODV), are stored in folders named by the pack number and design:
 * `P462_NMC532_R2 design`
 * `P492_NMC532_R1 design`
 * `P531_NMC811_R1 design`
@@ -22,7 +22,7 @@ Cycle-by-cycle battery data, including capacity, Columbic efficiency, end of cha
 
 The cycle-by-cycle data are in the format of .csv:
 * capacity: `Capacity_CellXX.csv`
-* Columbic efficiency: `CE_CellXX.csv`
+* Coulombic efficiency: `CE_CellXX.csv`
 * End of charge voltage: (EOCV)`EOC_CellXX.csv`
 * End of discharge voltage: (EODV)`EOD_CellXX.csv`
 
@@ -45,4 +45,4 @@ The following is a library of codes that will be run by `Main_LLI_LAM_Classifica
 
 * `createDataframeFromPackDictV2.py`will find trends within series to be used as predictor variables for Decision Tree Classification.   
 
-* `createDataframeforLAM.py`is a replica of `createDataframeFromPackDictV2.py`, but include the regression analysis of %LAM.  
+* `createDataframeforLAM.py`is a replica of `createDataframeFromPackDictV2.py`, but includes the regression analysis of %LAM.  
