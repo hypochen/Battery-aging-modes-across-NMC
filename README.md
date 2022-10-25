@@ -29,7 +29,7 @@ Download `Battery raw data.zip` and `Pouch cell_summary.xlsx` into a directory o
 
 All of the codes used in data processing and analysis can be found in  `code` folder.  
 
-Call the `Main_LLI_LAM_Classification.py` and `Main_LAM_estimation.py` to process and analyze the battery data, including data grabbing and pre-processing, creation of a dataframe, data analysis, and plotting.  
+Call the `Main_LLI_LAM_Classification.py` and `Main_LAM_estimation.py` to process and analyze the battery data, including data grabbing and pre-processing, creation of a dataframe, data analysis, and plotting. Please change the file directory to fit your local file structure.  
 * `Main_LLI_LAM_Classification.py` will classify cells into Li plating, SEI formation, and LAM_PE.  
 * `Main_LAM_estimation.py` will do a regression to estimate %LAM_PE.  
 
