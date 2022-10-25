@@ -1,31 +1,43 @@
 # Joule_battery-aging-modes-across-NMC
-Joule_battery aging modes across NMC
-###  Introduction
-Last updated by  
-Bor-Rong (Hypo) Chen and Cody M. Walker
-Code and raw data for the aging mode analysis study.    
-Dataset consisted of 44 NMC/Gr single layer pouch cells.  
-Capacity, Columbic efficiency, end of charge voltage (EOCV), and end of discharge voltage (EODV) are included. 
 
-###  Summary of the cells' information 
-A summary of the 44 cells' information can be found in `summary.xlxs`.  
-Use `openPouchSummary.py` to select the cells to be analyzed. 
+###  Introduction
+Last updated by Bor-Rong (Hypo) Chen and Cody M. Walker.  
+Raw battery data and codes for battery aging mode classification.    
+The raw dataset consisted of 44 NMC/Gr single layer pouch cells. The data provided include cycle-by-cycle capacity, Columbic efficiency, end of charge voltage (EOCV), and end of discharge voltage (EODV). 
+
+###  Summary of the cells
+A summary of the 44 cells' information, including design parameters and cycling conditions, can be found in `Pouch cell_summary.xlsx`.  
+
+### Battery data overview 
+Stored in the folder `Battery raw data`.  
+
+Cycle-by-cycle battery data, including capacity, Columbic efficiency, end of charge voltage (EOCV), and end of discharge voltage (EODV), are stored in folders named by the pack number and design:
+* `P462_NMC532_R2 design`
+* `P492_NMC532_R1 design`
+* `P531_NMC811_R1 design`
+* `P533_NMC532_R2 design`
+* `P540_NMC811_R2 design`
+
+The cycle-by-cycle data are in the format of .csv:
+* capacity: `Capacity_CellXX.csv`
+* Columbic efficiency: `CE_CellXX.csv`
+* End of charge voltage: (EOCV)`EOC_CellXX.csv`
+* End of discharge voltage: (EODV)`EOD_CellXX.csv`
 
 ###  Code overview
+Download the battery data into a directory of your choice.   
+Use `openPouchSummary.py` to select the cells to serve as training data sets.  
 
-Set up your file directory 
+Call the `Main_LLI_LAM_Classification.py` and `Main_LAM_estimation.py` to process and analyze the battery data, including data grabbing and pre-processing, creation of a dataframe, data analysis, and plotting.  
+* `Main_LLI_LAM_Classification.py` will classify cells into Li plating, SEI formation, and LAM_PE.  
+* `Main_LAM_estimation.py` will do a regression to estimate %LAM_PE.  
 
-Call the `Main_LLI_LAM_Classification.py` and `Main_LAM_estimation.py`to process and analyze the data, including data grabbing and preprocessing, then create a dataframe, plus analysis and plotting. 
+The following is a library of codes that will be run by `Main_LLI_LAM_Classification.py` and `Main_LAM_estimation.py`.  
 
-Use `fcnCBCdict.py` to getting cycle-by-cycle data for each cell in each pack. This is the one code that reads the raw data in the libary. 
+* `fcnCBCdict.py` will grab cycle-by-cycle data for each cell in each pack. 
 
-Use `createDataframeFromPackDictV2.py`to find trends within series to be used as predictor variables for Decision Tree Classification
-Use `createDataframeforLAM.py` this one also includes the analysis of %LAM. The function is all the same with line 17. to find trends within series to be used as predictor variables for Decision Tree Classification
-  
-Use `detrendCBCdict.py` to remove RPTs by treating them as seasonal effects and removing them with Seasonal Decomposition of Time Series with period    
+* `detrendCBCdict.py` will remove spikes caused by RPTs in the raw battery data. This is done by treating them as seasonal effects and removing them with Seasonal Decomposition of Time Series with period.    
 
+* `createDataframeFromPackDictV2.py`will find trends within series to be used as predictor variables for Decision Tree Classification.   
 
-Use `Main_LLI_LAM_Classification.py`to  
-Use `Main_LAM_estimation.py`to  
-
-###  Run the analysis
+* `createDataframeforLAM.py`is a replica of `createDataframeFromPackDictV2.py`, but include the regression analysis of %LAM.  
