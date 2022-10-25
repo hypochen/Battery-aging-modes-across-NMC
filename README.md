@@ -1,4 +1,4 @@
-# Joule_battery-aging-modes-across-NMC
+# Battery-aging-modes-across-NMC
 
 ###  Introduction
 Last updated by Bor-Rong (Hypo) Chen and Cody M. Walker.  
