@@ -25,7 +25,7 @@ The cycle-by-cycle data are in the format of .csv:
 * End of discharge voltage: (EODV)`EOD_CellXX.csv`
 
 ###  Code overview
-Download the battery data into a directory of your choice.   
+Download `Battery raw data.zip` and `Pouch cell_summary.xlsx` into a directory of your choice.   
 Use `openPouchSummary.py` to select the cells to serve as training data sets.  
 
 Call the `Main_LLI_LAM_Classification.py` and `Main_LAM_estimation.py` to process and analyze the battery data, including data grabbing and pre-processing, creation of a dataframe, data analysis, and plotting.  
