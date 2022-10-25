@@ -9,7 +9,7 @@ The raw dataset consisted of 44 NMC/Gr single layer pouch cells. The data provid
 A summary of the 44 cells' information, including design parameters and cycling conditions, can be found in `Pouch cell_summary.xlsx`.  
 
 ### Battery data overview 
-Stored in the folder `Battery raw data`.  
+Stored in the folder `Battery raw data.zip`.  
 
 Cycle-by-cycle battery data, including capacity, Columbic efficiency, end of charge voltage (EOCV), and end of discharge voltage (EODV), are stored in folders named by the pack number and design:
 * `P462_NMC532_R2 design`
