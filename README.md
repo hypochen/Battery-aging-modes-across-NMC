@@ -2,8 +2,10 @@
 
 ###  Introduction
 Last updated by Bor-Rong (Hypo) Chen and Cody M. Walker.  
+
 Raw battery data and codes for battery aging mode classification.    
-The raw dataset consisted of 44 NMC/Gr single layer pouch cells. The data provided include cycle-by-cycle capacity, Columbic efficiency, end of charge voltage (EOCV), and end of discharge voltage (EODV). 
+
+The raw dataset is consisted of 44 NMC/Gr single layer pouch cells. The data provided include cycle-by-cycle capacity, Columbic efficiency, end of charge voltage (EOCV), and end of discharge voltage (EODV). 
 
 ###  Summary of the cells
 A summary of the 44 cells' information, including design parameters and cycling conditions, can be found in `Pouch cell_summary.xlsx`.  
