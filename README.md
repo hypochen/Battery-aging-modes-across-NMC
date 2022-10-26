@@ -31,18 +31,18 @@ Download `Battery raw data.zip` and `Pouch cell_summary.xlsx` into a directory o
 
 All of the codes used in data processing and analysis can be found in  `code` folder.  
 
-Call the `Main_LLI_LAM_Classification.py` and `Main_LAM_estimation.py` to process and analyze the battery data, including data grabbing and pre-processing, creation of a dataframe, data analysis, and plotting. Please change the file directory to fit your local file structure.  
-* `Main_LLI_LAM_Classification.py` will classify cells into Li plating, SEI formation, and LAM_PE.  
-* `Main_LAM_estimation.py` will do a regression to estimate %LAM_PE.  
+Call `Main_LLI_LAM_Classification.py` and `Main_LAM_estimation.py` to process and analyze the battery data, including data grabbing and pre-processing, creation of a dataframe, data analysis, and plotting. Please change the file directory to fit your local file structure.  
+* `Main_LLI_LAM_Classification.py` will classify the cells into Li plating, SEI formation + less LAM_PE, and SEI formation + more LAM_PE.  
+* `Main_LAM_estimation.py` will perform a regression to estimate %LAM_PE.  
 
 The following is a library of codes that will be run by `Main_LLI_LAM_Classification.py` and `Main_LAM_estimation.py`.  
 
 * `openPouchSummary.py` selects the cells to serve as training data sets.
 
-* `fcnCBCdict.py` will grab cycle-by-cycle data for each cell in each pack. 
+* `fcnCBCdict.py` grabs cycle-by-cycle data for each cell in each pack. 
 
-* `detrendCBCdict.py` will remove spikes caused by RPTs in the raw battery data. This is done by treating them as seasonal effects and removing them with Seasonal Decomposition of Time Series with period.    
+* `detrendCBCdict.py` removes spikes caused by RPTs in the raw battery data. This is done by treating them as seasonal effects and removing them with Seasonal Decomposition of Time Series with period.    
 
-* `createDataframeFromPackDictV2.py`will find trends within series to be used as predictor variables for Decision Tree Classification.   
+* `createDataframeFromPackDictV2.py` finds trends within series to be used as predictor variables for Decision Tree Classification.   
 
-* `createDataframeforLAM.py`is a replica of `createDataframeFromPackDictV2.py`, but includes the regression analysis of %LAM.  
+* `createDataframeforLAM.py`is a replica of `createDataframeFromPackDictV2.py`, but includes the regression analysis of %LAM_PE.  
