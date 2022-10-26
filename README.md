@@ -19,6 +19,7 @@ Cycle-by-cycle battery data, including capacity, Coulombic efficiency, end of ch
 * `P531_NMC811_R1 design`
 * `P533_NMC532_R2 design`
 * `P540_NMC811_R2 design`
+
 (R1 = L_low and R2 = L_moderate design for electrodes)  
 
 The cycle-by-cycle data are in the format of .csv:
@@ -26,6 +27,8 @@ The cycle-by-cycle data are in the format of .csv:
 * Coulombic efficiency: `CE_CellXX.csv`
 * End of charge voltage: (EOCV)`EOC_CellXX.csv`
 * End of discharge voltage: (EODV)`EOD_CellXX.csv`
+
+(XX indicates cell's number)  
 
 ###  Code overview
 Download `Battery raw data.zip` and `Pouch cell_summary.xlsx` into a directory of your choice.   
