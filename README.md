@@ -8,7 +8,7 @@ Raw battery data and codes for battery aging mode classification.
 The raw dataset consists of 44 NMC/Graphite single layer pouch cells. The data provided include cycle-by-cycle capacity, Coulombic efficiency, end of charge voltage (EOCV), and end of discharge voltage (EODV). 
 
 ###  Summary of the cells
-A summary of the 44 cells' information, including design parameters and cycling conditions, can be found in `Pouch cell_summary.xlsx`.  
+A summary of the 44 cells' information, including design parameters, cycling conditions, major aging modes, and experimentally obtained %LAM_PE, can be found in `Pouch cell_summary.xlsx`.  
 
 ### Battery data overview 
 Stored in the folder `Battery raw data.zip`.  
