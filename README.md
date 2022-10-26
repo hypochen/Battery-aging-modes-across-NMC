@@ -19,6 +19,7 @@ Cycle-by-cycle battery data, including capacity, Coulombic efficiency, end of ch
 * `P531_NMC811_R1 design`
 * `P533_NMC532_R2 design`
 * `P540_NMC811_R2 design`
+(R1 = L_low and R2 = L_moderate design for electrodes)  
 
 The cycle-by-cycle data are in the format of .csv:
 * capacity: `Capacity_CellXX.csv`
