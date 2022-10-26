@@ -28,7 +28,7 @@ The cycle-by-cycle data are in the format of .csv:
 * End of charge voltage: (EOCV)`EOC_CellXX.csv`
 * End of discharge voltage: (EODV)`EOD_CellXX.csv`
 
-(XX indicates cell's number)  
+(XX indicates cell number)  
 
 ###  Code overview
 Download `Battery raw data.zip` and `Pouch cell_summary.xlsx` into a directory of your choice.   
